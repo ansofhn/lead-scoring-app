@@ -33,7 +33,7 @@ with st.sidebar:
     c2.metric("F1", f"{m['F1']:.3f}")
     c1.metric("Recall", f"{m['Recall']:.3f}")
     c2.metric("Precision", f"{m['Precision']:.3f}")
-    st.caption("Metrik dihitung pada data uji 20% (lihat notebook).")
+    st.caption("Metrik dihitung pada data uji 20%.")
     st.divider()
     st.write("**Aturan kategori**")
     st.write(f"- Hot: probabilitas ≥ {info['hot_cutoff']:.0%}")

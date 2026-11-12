@@ -18,7 +18,7 @@ except Exception as e:  # file model hilang / versi tidak cocok
     st.error(f"Model gagal dimuat: {e}")
     st.stop()
 
-st.title("📈 Lead Scoring")
+st.title("Lead Scoring")
 st.caption("Memprediksi peluang sebuah lead berubah menjadi pelanggan (Converted), "
            "lalu mengelompokkannya menjadi Hot, Warm, atau Cold.")
 for pesan in cek_versi(info):

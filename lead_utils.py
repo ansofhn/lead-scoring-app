@@ -16,6 +16,12 @@ KOSONG = "(kosong / tidak diisi)"
 def load_artifacts():
     """Muat pipeline dan metadata model."""
     model = joblib.load(MODEL_PATH)
+    try:
+        model = joblib.load(MODEL_PATH)
+    except Exception as e:
+        raise RuntimeError(
+            f"{type(e).__name__}: {e} | size={MODEL_PATH.stat().st_size}"
+        ) from e
     info = json.loads(INFO_PATH.read_text(encoding="utf-8"))
     return model, info
 
